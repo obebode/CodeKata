@@ -12,5 +12,4 @@ public class Kata02b {
         int upperBound = array_of_int.length - 1;
         return binarySearch(array_of_int, lowerBound, upperBound, i);
     }
-
 }
