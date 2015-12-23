@@ -1,19 +1,20 @@
+package Kata04;
+
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class Kata04Test {
+public class WeatherTest {
 
     @Test
     public void testReadFile() throws Exception {
 
-        Kata04 fileInfo = new Kata04();
+        Weather fileInfo = new Weather();
         String[] lines = fileInfo.ReadFile("/Users/xristol/Downloads/weather.dat");
+
 
         for (String line : lines) {
             System.out.println(line);
         }
-    }
 
+    }
 
 }

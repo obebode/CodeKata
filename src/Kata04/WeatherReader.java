@@ -1,12 +1,15 @@
+package Kata04;
+
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Kata04 {
+public class WeatherReader {
 
-    public String[] ReadFile(String filename) throws IOException {
+    public static String[] ReadFile(String filename) throws IOException {
 
         FileReader fileReader = null;
         BufferedReader bufferedReader = null;
@@ -19,7 +22,19 @@ public class Kata04 {
 
             String line = null;
             while ((line = bufferedReader.readLine()) != null) {
-                lines.add(line);
+                //lines.add(line);
+                String elements[] = line.split("");
+                final String Dy = elements[0];
+                final String MxT = elements[1];
+                final String MnT = elements[2];
+
+                return new Weather(
+                        Integer.parseInt(Dy),
+                        Integer.parseInt(MxT),
+                        Integer.parseInt(MnT)
+
+                );
+
             }
         } finally {
             if (fileReader != null) {
@@ -32,5 +47,4 @@ public class Kata04 {
 
         return lines.toArray(new String[lines.size()]);
     }
-
 }
