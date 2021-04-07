@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 
 public class Kata2aTest {
-
+yes ples
     @Test
     public void testChop() throws Exception {
 
